@@ -1,0 +1,12 @@
+{
+	"C_Cpp.intelliSenseEngine": "disabled",
+	"clangd.enable": true,
+	"clangd.path": "clangd-19",
+	"clangd.arguments": [
+		"--clang-tidy=false",
+		"--limit-references=0",
+		"--limit-results=0",
+		"--header-insertion=never",
+	],
+	"editor.inlayHints.enabled": "off"
+}
