@@ -18,13 +18,13 @@ This project fix this problem by adding these included .c files into compile_com
 Just clone this project and run:
 
 ```shell
-./setup.sh kernel_version [clang_suffix]
+./kernel.sh kernel_version [clang_suffix]
 ```
 
 example：
 
 ```shell
-./setup.sh 6.14.3 -19
+./kernel.sh 6.14.3 -19
 ```
 
 When successful, the new source code directory is automatically opened using vscode.

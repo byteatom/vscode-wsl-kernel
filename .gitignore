@@ -1,3 +1,5 @@
 node_modules
 /linux*
 /package*
+/glibc*
+!/glibc.sh

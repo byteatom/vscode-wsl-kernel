@@ -1,10 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -e
 
+cd "$(dirname "$0")"
+
 if [ "$#" -lt 1 ]; then
-	echo "Usage: ./setup.sh kernel_version [clang_suffix]"
-	echo "Example: ./setup.sh 6.14.3 -19"
+	echo "Usage: ./kernel.sh kernel_version [clang_suffix]"
+	echo "Example: ./kernel.sh 6.14.3 -19"
 	exit 1
 fi
 
@@ -15,7 +17,7 @@ if [ ! -f "$KERNEL_FILE" ]; then
 	KERNEL_MAJOR=$(cut -d '.' -f 1 <<<"$1")
 	wget https://mirrors.edge.kernel.org/pub/linux/kernel/v"$KERNEL_MAJOR".x/"$KERNEL_FILE"
 fi
-if [ ! -d linux-"$1" ]; then
+if [ ! -d "$KERNEL_DIR" ]; then
 	tar -xf "$KERNEL_FILE"
 fi
 
